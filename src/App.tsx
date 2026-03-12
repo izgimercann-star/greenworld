@@ -1341,11 +1341,11 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
     <section className="relative pt-40 pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(249,212,35,0.05),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(62,142,65,0.05),transparent_50%)]" />
       
-      <div className="absolute top-0 right-0 -z-10 w-5/12 h-full opacity-20 hidden lg:block">
+      <div className="absolute top-0 right-0 -z-10 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
         <img 
           src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000" 
           alt="Tree" 
-          className="w-full h-full object-cover rounded-bl-[120px]"
+          className="w-full h-full object-cover lg:rounded-bl-[120px]"
           referrerPolicy="no-referrer"
         />
       </div>
@@ -1812,10 +1812,13 @@ const CartModal = ({
                   <MessageCircle size={20} />
                   WhatsApp ile Sipariş Ver
                 </a>
-                <div className="flex items-center justify-center gap-2 text-brand-earth/60 text-xs mt-2">
+                <a 
+                  href="tel:05347636010"
+                  className="flex items-center justify-center gap-2 text-brand-earth/60 text-xs mt-2 hover:text-brand-green transition-colors"
+                >
                   <Phone size={12} />
                   <span>Veya bizi arayın: 0534 763 60 10</span>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1884,15 +1887,15 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-brand-green/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-brand-green/5 flex items-center justify-center text-brand-green">
+          <a href="tel:05347636010" className="flex items-center gap-4 group">
+            <div className="w-10 h-10 rounded-full bg-brand-green/5 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-brand-cream transition-all">
               <Phone size={18} />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-brand-earth/60">Bize Ulaşın</p>
-              <p className="font-bold text-brand-green">0534 763 60 10</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-brand-earth/60 group-hover:text-brand-leaf transition-colors">Bize Ulaşın</p>
+              <p className="font-bold text-brand-green group-hover:text-brand-leaf transition-colors">0534 763 60 10</p>
             </div>
-          </div>
+          </a>
           <button 
             onClick={onClose}
             className="px-10 py-4 bg-brand-green text-brand-cream rounded-xl font-bold hover:bg-brand-leaf transition-all shadow-md"
