@@ -1076,36 +1076,36 @@ interface CartItem extends Product {
 
 const InsectHero = () => {
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 z-0 bg-brand-green" />
+      <div className="absolute inset-0 -z-10 bg-brand-green" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-32 pb-12">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl bg-brand-green/70 backdrop-blur-md p-12 rounded-[3rem] border border-white/20 shadow-2xl"
+          className="max-w-2xl bg-brand-green/70 backdrop-blur-md p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-white/20 shadow-2xl"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-16 h-0.5 bg-brand-sun" />
-            <span className="text-brand-sun font-bold uppercase tracking-[0.4em] text-xs">Mikro Dünyanın Gizemi</span>
+          <div className="flex items-center gap-4 mb-6 md:mb-8">
+            <div className="w-12 md:w-16 h-0.5 bg-brand-sun" />
+            <span className="text-brand-sun font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] text-[10px] md:text-xs">Mikro Dünyanın Gizemi</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-brand-cream mb-8 leading-tight tracking-tight flex items-center gap-6">
+          <h1 className="text-4xl md:text-7xl font-serif font-bold text-brand-cream mb-6 md:mb-8 leading-tight tracking-tight flex items-center gap-4 md:gap-6">
             Böcekler Dünyası
           </h1>
-          <p className="text-xl md:text-2xl text-brand-cream/90 mb-12 leading-relaxed font-light">
+          <p className="text-base md:text-2xl text-brand-cream/90 mb-8 md:mb-12 leading-relaxed font-light">
             Böcekler, ekosistemimizin en önemli ve büyüleyici parçalarıdır. 
             Karmaşık yapıları, eşsiz renkleri ve inanılmaz kamuflaj yetenekleri ile mikro dünyanın kapılarını aralayın. 
           </p>
-          <div className="grid grid-cols-2 gap-10 py-10 border-t border-brand-cream/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10 py-8 md:py-10 border-t border-brand-cream/20">
             <div>
-              <h4 className="text-brand-sun font-bold text-3xl mb-2">Kamuflaj Ustaları</h4>
-              <p className="text-brand-cream/70 text-sm italic leading-relaxed">Doğanın en iyi gizlenen canlıları ile tanışın.</p>
+              <h4 className="text-brand-sun font-bold text-2xl md:text-3xl mb-2">Kamuflaj Ustaları</h4>
+              <p className="text-brand-cream/70 text-xs md:text-sm italic leading-relaxed">Doğanın en iyi gizlenen canlıları ile tanışın.</p>
             </div>
             <div>
-              <h4 className="text-brand-sun font-bold text-3xl mb-2">Uzman Desteği</h4>
-              <p className="text-brand-cream/70 text-sm italic leading-relaxed">Kurulumdan bakıma her adımda yanınızdayız.</p>
+              <h4 className="text-brand-sun font-bold text-2xl md:text-3xl mb-2">Uzman Desteği</h4>
+              <p className="text-brand-cream/70 text-xs md:text-sm italic leading-relaxed">Kurulumdan bakıma her adımda yanınızdayız.</p>
             </div>
           </div>
         </motion.div>
@@ -1127,18 +1127,18 @@ const InsectSpotlight = ({ onCategorySelect, onDiscoverClick }: { onCategorySele
         />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16">
           {/* Insects Block */}
-          <div className="bg-brand-cream/10 backdrop-blur-md p-12 rounded-[3rem] border border-white/10">
+          <div className="bg-brand-cream/10 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-white/10">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-0.5 bg-brand-sun" />
               <span className="text-brand-sun font-bold uppercase tracking-widest text-xs">Böcek Koleksiyonu</span>
             </div>
-            <h2 className="text-4xl font-serif font-bold text-brand-cream mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-cream mb-6 leading-tight">
               Mikro Dostlar <br />
               <span className="italic text-brand-sun">Sizi Bekliyor</span>
             </h2>
-            <p className="text-brand-cream/80 mb-10 leading-relaxed">
+            <p className="text-brand-cream/80 mb-10 leading-relaxed text-sm md:text-base">
               Doğanın en gizemli küçük canlılarıyla tanışın. Sağlıklı ve özel böcek koleksiyonumuzu keşfedin.
             </p>
             <button 
@@ -1154,16 +1154,16 @@ const InsectSpotlight = ({ onCategorySelect, onDiscoverClick }: { onCategorySele
           </div>
 
           {/* Seeds Block */}
-          <div className="bg-brand-cream/10 backdrop-blur-md p-12 rounded-[3rem] border border-white/10">
+          <div className="bg-brand-cream/10 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-white/10">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-0.5 bg-brand-leaf" />
               <span className="text-brand-leaf font-bold uppercase tracking-widest text-xs">Tohum Koleksiyonu</span>
             </div>
-            <h2 className="text-4xl font-serif font-bold text-brand-cream mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-cream mb-6 leading-tight">
               Atalık Tohumlar <br />
               <span className="italic text-brand-leaf">Toprakla Buluşsun</span>
             </h2>
-            <p className="text-brand-cream/80 mb-10 leading-relaxed">
+            <p className="text-brand-cream/80 mb-10 leading-relaxed text-sm md:text-base">
               Nesilden nesile aktarılan, genetiği korunmuş gerçek tohumlarla kendi bahçenizi kurun.
             </p>
             <button 
@@ -1206,7 +1206,7 @@ const Navbar = ({
           >
             <div 
               className="rounded-full overflow-hidden border-2 border-brand-green/10 shadow-md transition-transform group-hover:scale-110 bg-white p-0"
-              style={{ width: '100px', height: 'auto', aspectRatio: '1/1' }}
+              style={{ width: 'clamp(60px, 15vw, 100px)', height: 'auto', aspectRatio: '1/1' }}
             >
               <img 
                 src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
@@ -1337,10 +1337,10 @@ const Navbar = ({
 
 const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDiscoverClick: () => void }) => {
   return (
-    <section className="relative pt-40 pb-24 overflow-hidden">
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(249,212,35,0.05),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(62,142,65,0.05),transparent_50%)]" />
       
-      <div className="absolute top-0 right-0 z-0 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
+      <div className="absolute top-0 right-0 -z-10 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
         <img 
           src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000" 
           alt="Tree" 
@@ -1348,48 +1348,48 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
         />
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-4 mb-6 md:mb-8">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-px bg-brand-leaf" />
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-brand-leaf">
+                <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-brand-leaf">
                   Tohumlar & Böcekler
                 </span>
               </div>
               <div className="w-1 h-1 rounded-full bg-brand-green/20" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-green/60">
+              <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-brand-green/60">
                 Kurucu: MERCAN İZGİ
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-serif font-bold leading-[0.95] mb-8 text-brand-green tracking-tighter">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-bold leading-[1.1] md:leading-[0.95] mb-6 md:mb-8 text-brand-green tracking-tighter">
               Doğanın <br />
               <span className="italic text-brand-leaf font-medium">Eşsiz</span> <br />
               Dengesi
             </h1>
             
-            <p className="text-lg md:text-xl text-brand-earth mb-12 leading-relaxed max-w-xl">
+            <p className="text-base md:text-xl text-brand-earth mb-8 md:mb-12 leading-relaxed max-w-xl">
               Atalık tohumlarımızla toprağa hayat verin, egzotik dostlarımızla 
               doğanın gizemli dünyasını keşfedin. Yaşamın her formuna saygıyla.
             </p>
             
-            <div className="flex flex-wrap gap-5">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
               <button 
                 onClick={onDiscoverClick}
-                className="px-10 py-4 gradient-leaf text-brand-cream rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+                className="w-full sm:w-auto px-8 md:px-10 py-4 gradient-leaf text-brand-cream rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Koleksiyonu İncele
                 <ChevronRight size={18} />
               </button>
               <button 
                 onClick={onAboutOpen}
-                className="px-10 py-4 border border-brand-green/20 text-brand-green rounded-full font-bold hover:bg-brand-green hover:text-brand-cream transition-all duration-300"
+                className="w-full sm:w-auto px-8 md:px-10 py-4 border border-brand-green/20 text-brand-green rounded-full font-bold hover:bg-brand-green hover:text-brand-cream transition-all duration-300"
               >
                 Hikayemiz
               </button>
@@ -1519,8 +1519,8 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
 
         <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
           {/* Left Side: Image & Quick Info */}
-          <div className="lg:w-5/12 relative bg-white flex flex-col">
-            <div className="h-[400px] lg:h-full relative overflow-hidden group">
+          <div className="lg:w-5/12 relative bg-white flex flex-col shrink-0">
+            <div className="h-[300px] sm:h-[400px] lg:h-full relative overflow-hidden group">
               <img 
                 src={product.image} 
                 alt={product.name} 
@@ -1530,25 +1530,25 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-green/60 via-transparent to-transparent opacity-60" />
               
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-4 py-1.5 bg-brand-green/90 backdrop-blur-md text-brand-cream text-[10px] font-bold rounded-full uppercase tracking-widest shadow-lg">
+              <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8">
+                <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
+                  <span className="px-3 md:px-4 py-1 md:py-1.5 bg-brand-green/90 backdrop-blur-md text-brand-cream text-[9px] md:text-[10px] font-bold rounded-full uppercase tracking-widest shadow-lg">
                     {product.category}
                   </span>
                   {product.origin && (
-                    <span className="px-4 py-1.5 bg-brand-leaf/90 backdrop-blur-md text-brand-cream text-[10px] font-bold rounded-full uppercase tracking-widest shadow-lg flex items-center gap-2">
+                    <span className="px-3 md:px-4 py-1 md:py-1.5 bg-brand-leaf/90 backdrop-blur-md text-brand-cream text-[9px] md:text-[10px] font-bold rounded-full uppercase tracking-widest shadow-lg flex items-center gap-2">
                       <Globe size={12} />
                       {product.origin}
                     </span>
                   )}
                 </div>
-                <h2 className="text-4xl font-serif font-bold text-white drop-shadow-lg">{product.name}</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-white drop-shadow-lg">{product.name}</h2>
               </div>
             </div>
           </div>
 
           {/* Right Side: Detailed Content */}
-          <div className="lg:w-7/12 p-8 lg:p-14 overflow-y-auto bg-brand-cream/50 custom-scrollbar">
+          <div className="lg:w-7/12 p-6 md:p-8 lg:p-14 overflow-y-auto bg-brand-cream/50 custom-scrollbar">
             <div className="max-w-2xl mx-auto">
               {/* Header Info */}
               <div className="mb-10">
@@ -1866,7 +1866,7 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
         <div className="text-center mb-12">
           <div 
             className="rounded-full overflow-hidden border-4 border-brand-green/10 mx-auto mb-6 shadow-xl bg-white p-0"
-            style={{ width: '140px', height: 'auto', aspectRatio: '1/1' }}
+            style={{ width: 'clamp(100px, 25vw, 140px)', height: 'auto', aspectRatio: '1/1' }}
           >
             <img 
               src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
@@ -1918,11 +1918,11 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
     <footer id="contact" className="bg-brand-green text-brand-cream pt-24 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-2">
+          <div className="col-span-full lg:col-span-2">
             <div className="flex items-center gap-3 mb-8">
               <div 
                 className="rounded-full overflow-hidden border-2 border-brand-cream/20 shadow-lg bg-white p-0"
-                style={{ width: '100px', height: 'auto', aspectRatio: '1/1' }}
+                style={{ width: 'clamp(60px, 15vw, 100px)', height: 'auto', aspectRatio: '1/1' }}
               >
                 <img 
                   src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
@@ -1931,7 +1931,7 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="text-3xl font-serif font-bold tracking-tight">Green World</span>
+              <span className="text-2xl md:text-3xl font-serif font-bold tracking-tight">Green World</span>
             </div>
             <p className="text-brand-cream/60 max-w-sm mb-10 leading-relaxed text-base">
               Atalık tohumlar ve egzotik canlılarla doğanın mucizelerini keşfedin. 
