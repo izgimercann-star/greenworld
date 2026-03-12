@@ -80,7 +80,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Renkli Pazı",
     price: 10,
     description: "Saplarının kırmızı, sarı, turuncu, pembe ve beyaz olmasıyla tanınan, hem dekoratif hem de besin deposu geleneksel pazı tohumu.",
-    image: "https://lh3.googleusercontent.com/d/1JdYit7MCUgVmNR-sXpPEDgoriWUjoyp9",
+    image: "https://drive.google.com/uc?export=view&id=1JdYit7MCUgVmNR-sXpPEDgoriWUjoyp9",
     scientificName: "Beta vulgaris subsp. vulgaris",
     family: "Amaranthaceae (Ispanak ve pancar ailesi)",
     origin: "Akdeniz (Yunanistan, İtalya, Roma dönemi)",
@@ -119,7 +119,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Patlıcan",
     price: 15,
     description: "Togo patlıcanı, Afrika kökenli bir patlıcan türüdür. Bilimsel adı Solanum aethiopicum olan bu bitki, özellikle Batı Afrika’da çok yaygındır. Meyveler küçük domates gibi yuvarlak olur. Tohum olarak satılmaktadır.",
-    image: "https://lh3.googleusercontent.com/d/19Cdd6JRLRCWdCe4hzFhrYsJYSPii68IX",
+    image: "https://drive.google.com/uc?export=view&id=19Cdd6JRLRCWdCe4hzFhrYsJYSPii68IX",
     scientificName: "Solanum aethiopicum",
     family: "Solanaceae",
     origin: "Togo, Batı Afrika (Gana, Nijerya, Benin, Togo, Uganda)",
@@ -158,7 +158,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Patlıcan",
     price: 10,
     description: "Büyük, yuvarlak ve koyu mor renkli meyveleri ile tanınan, Türkiye'nin en sevilen patlıcan çeşitlerinden biridir. Kebap ve közleme için ideal olan bu patlıcanın atalık tohumudur.",
-    image: "https://lh3.googleusercontent.com/d/18q6QAKC_sjkibIZ3hEXi4qNOtMwwKqP5",
+    image: "https://drive.google.com/uc?export=view&id=18q6QAKC_sjkibIZ3hEXi4qNOtMwwKqP5",
     scientificName: "Solanum melongena",
     family: "Solanaceae",
     origin: "Hindistan, Myanmar, Çin (Anadolu ve Akdeniz mutfağı)",
@@ -197,7 +197,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Biber",
     price: 25,
     description: "Carolina Reaper, dünyadaki en acı biberlerden biridir. Aşırı acılığı ve karakteristik kuyruklu (stinger) şekli ile tanınan bu efsanevi biberin tohumudur.",
-    image: "https://lh3.googleusercontent.com/d/1xJXeowGC8-tIiPsHFgf1iYAM-Z4CeGWt",
+    image: "https://drive.google.com/uc?export=view&id=1xJXeowGC8-tIiPsHFgf1iYAM-Z4CeGWt",
     scientificName: "Capsicum chinense",
     family: "Solanaceae",
     origin: "South Carolina, ABD (PuckerButt Pepper Company - Ed Currie)",
@@ -232,7 +232,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Biber",
     price: 5,
     description: "Küçük, yuvarlak ve kırmızı renkte olan bir biber tohumudur. Cherry Pepper veya Cherry Bomb Pepper olarak da bilinir.",
-    image: "https://lh3.googleusercontent.com/d/1K-iHbt6C6Havqfl7s4t56xHPaAo4qODn",
+    image: "https://drive.google.com/uc?export=view&id=1K-iHbt6C6Havqfl7s4t56xHPaAo4qODn",
     scientificName: "Capsicum annuum",
     family: "Solanaceae (Biber ailesi)",
     origin: "Meksika, Peru, Bolivya",
@@ -272,7 +272,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Biber",
     price: 15,
     description: "İnce, uzun ve sarı renkte olan bir biber tohumudur. Turşu, kızartma ve yemeklerde çok popülerdir.",
-    image: "https://lh3.googleusercontent.com/d/1YXqNK5VdEBRNnZXCOC8Ht8AhzPA1bQmq",
+    image: "https://drive.google.com/uc?export=view&id=1YXqNK5VdEBRNnZXCOC8Ht8AhzPA1bQmq",
     scientificName: "Capsicum annuum",
     family: "Solanaceae",
     origin: "Meksika, Peru, Bolivya",
@@ -312,7 +312,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 15,
     description: "Kalp şeklinde büyük meyveler veren eski (atalık) bir domates tohumudur. Tatlı, aromatik ve çok etli yapısıyla bilinir.",
-    image: "https://lh3.googleusercontent.com/d/1h18xwUjKOu_SYqEito0vvpkgGjG7QvVI",
+    image: "https://drive.google.com/uc?export=view&id=1h18xwUjKOu_SYqEito0vvpkgGjG7QvVI",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Bulgaristan",
@@ -350,7 +350,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 20,
     description: "Kalp şeklinde büyük meyveleri olan, çok etli ve az çekirdekli bir atalık domates tohumu grubudur.",
-    image: "https://lh3.googleusercontent.com/d/104WJ7cXzwijjuHuN3B6hX5J7K7J56vr4",
+    image: "https://drive.google.com/uc?export=view&id=104WJ7cXzwijjuHuN3B6hX5J7K7J56vr4",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "İtalya, Rusya, Bulgaristan, ABD",
@@ -388,7 +388,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 15,
     description: "İstanbul Beykoz kökenli, büyük, kaburgalı (dilimli) ve güçlü aromalı bir yerel atalık domates tohumu çeşididir.",
-    image: "https://lh3.googleusercontent.com/d/166ss00CPK_s62JEWicxaDzUG4PjvCHpv",
+    image: "https://drive.google.com/uc?export=view&id=166ss00CPK_s62JEWicxaDzUG4PjvCHpv",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Beykoz, İstanbul",
@@ -426,7 +426,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 15,
     description: "İtalya kökenli, uzun şekilli, çok etli ve dünyaca ünlü bir sosluk domates tohumu çeşididir.",
-    image: "https://lh3.googleusercontent.com/d/1gMfbgr-pgmurfobyRuaPL8qn8zRuKw1k",
+    image: "https://drive.google.com/uc?export=view&id=1gMfbgr-pgmurfobyRuaPL8qn8zRuKw1k",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Campania, İtalya",
@@ -463,7 +463,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 20,
     description: "Soluk beyaz veya krem renkte, tatlı aromalı ve az asidik bir atalık domates tohumu çeşididir.",
-    image: "https://lh3.googleusercontent.com/d/1PvpkEgy4L0bu-zb49Aq5WzAjib9kmkWL",
+    image: "https://drive.google.com/uc?export=view&id=1PvpkEgy4L0bu-zb49Aq5WzAjib9kmkWL",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Amerika, Avrupa, Türkiye",
@@ -501,7 +501,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 15,
     description: "Türkiye’ye özgü atalık bir domates çeşididir. Büyük, pembe renkte ve etli meyveleri ile tanınır. Tatlı aromasıyla salatalarda çok tercih edilir.",
-    image: "https://lh3.googleusercontent.com/d/1xYXoEY3Tm7694VAMgC-Tz0xTEkx5bxzw",
+    image: "https://drive.google.com/uc?export=view&id=1xYXoEY3Tm7694VAMgC-Tz0xTEkx5bxzw",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Türkiye (Marmara ve Ege Bölgesi)",
@@ -538,7 +538,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 15,
     description: "Küçük ve uzun oval şekilli, üzüm benzeri salkım şeklinde büyüyen çok tatlı ve aromatik bir çeri domates çeşididir.",
-    image: "https://lh3.googleusercontent.com/d/15o3sLzwSKCEjV-bNuGaVoZP18fpZ7ln8",
+    image: "https://drive.google.com/uc?export=view&id=15o3sLzwSKCEjV-bNuGaVoZP18fpZ7ln8",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "Hollanda veya ABD (Hibrit/Atalık varyeteleri mevcuttur)",
@@ -575,7 +575,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Domates",
     price: 20,
     description: "İtalya kökenli, büyük, aromatik ve çok etli atalık domates grubu. Pizza, sos ve taze tüketim için mükemmeldir.",
-    image: "https://lh3.googleusercontent.com/d/1BUsn6IN-XrYdoPdlsmvr7dlJtylpvOsz",
+    image: "https://drive.google.com/uc?export=view&id=1BUsn6IN-XrYdoPdlsmvr7dlJtylpvOsz",
     scientificName: "Solanum lycopersicum",
     family: "Solanaceae",
     origin: "İtalya (Campania, Toscana, Puglia, Sicilya)",
@@ -612,7 +612,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Mısır",
     price: 10,
     description: "Indian Corn veya Ornamental Corn olarak da bilinen, farklı renklerde tanelere sahip geleneksel mısır türü. Hem süsleme hem de beslenme amaçlı kullanılır.",
-    image: "https://lh3.googleusercontent.com/d/161HeMLdBIVeH6Y1xsl7kzg-k-QYb-3vg",
+    image: "https://drive.google.com/uc?export=view&id=161HeMLdBIVeH6Y1xsl7kzg-k-QYb-3vg",
     scientificName: "Zea mays",
     family: "Poaceae",
     origin: "Amerika kıtası (Güney ve Orta Amerika)",
@@ -651,7 +651,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Karpuz",
     price: 15,
     description: "Meksika kökenli, orta ve küçük boylu, genellikle tatlı ve sulu bir karpuz çeşididir. İnce kabuklu yapısıyla balkon ve bahçe tarımı için idealdir.",
-    image: "https://lh3.googleusercontent.com/d/11pA5tsyp5I1C16MlcXTD5QvYXxydYS4f",
+    image: "https://drive.google.com/uc?export=view&id=11pA5tsyp5I1C16MlcXTD5QvYXxydYS4f",
     scientificName: "Citrullus lanatus",
     family: "Cucurbitaceae",
     origin: "Meksika ve Orta Amerika",
@@ -690,7 +690,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Göbek",
     price: 10,
     description: "Yumuşak yapraklı, hafif tatlı ve tereyağını andıran dokusuyla bilinen geleneksel marul çeşidi. Özellikle salatalar ve sandviçler için idealdir.",
-    image: "https://lh3.googleusercontent.com/d/1nhUq-UcvMko6Y3sYRwmvc8pOLovbshle",
+    image: "https://drive.google.com/uc?export=view&id=1nhUq-UcvMko6Y3sYRwmvc8pOLovbshle",
     scientificName: "Lactuca sativa",
     family: "Asteraceae",
     origin: "Avrupa ve Akdeniz bölgesi",
@@ -729,7 +729,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Pak Choi",
     price: 15,
     description: "Asya mutfağının vazgeçilmezi, hafif tatlı ve gevrek gövdeli egzotik sebze. Hem yaprakları hem de beyaz gövdesiyle eşsiz bir lezzet sunar.",
-    image: "https://lh3.googleusercontent.com/d/1NHsYRPyaWCJXrvJysXnh5S2bCMblFkp-",
+    image: "https://drive.google.com/uc?export=view&id=1NHsYRPyaWCJXrvJysXnh5S2bCMblFkp-",
     scientificName: "Brassica rapa subsp. chinensis",
     family: "Brassicaceae (Lahana ailesi)",
     origin: "Çin ve Doğu Asya",
@@ -769,7 +769,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Ispanak",
     price: 20,
     description: "Hem yaprakları ıspanak gibi tüketilen hem de çileğe benzeyen tatlı kırmızı meyveler veren nadir ve dekoratif bir atalık bitki.",
-    image: "https://lh3.googleusercontent.com/d/1PLO0ZK7o2wWMVyx9lJ6jR2VjFbVPp8AS",
+    image: "https://drive.google.com/uc?export=view&id=1PLO0ZK7o2wWMVyx9lJ6jR2VjFbVPp8AS",
     scientificName: "Chenopodium capitatum",
     family: "Amaranthaceae",
     origin: "Kuzey Amerika",
@@ -808,7 +808,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Mizuna",
     price: 10,
     description: "Japon mutfağının vazgeçilmezi, ince parçalı yapraklı ve hafif acımsı aromalı, hızlı büyüyen ve yüksek verimli bir yeşillik.",
-    image: "https://lh3.googleusercontent.com/d/1x5AvrUo8zi8S53OU7Ezre-d-nBkyhcVQ",
+    image: "https://drive.google.com/uc?export=view&id=1x5AvrUo8zi8S53OU7Ezre-d-nBkyhcVQ",
     scientificName: "Brassica rapa subsp. japonica",
     family: "Brassicaceae (Turpgiller)",
     origin: "Japonya",
@@ -848,7 +848,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Kabak",
     price: 10,
     description: "Sebze olarak tüketilen ve özellikle içi oyularak dolma yapılabilen, orta boy ve silindirik şekilli geleneksel kabak türü. Yaz aylarının vazgeçilmezidir.",
-    image: "https://lh3.googleusercontent.com/d/1tX3rYal7HBYwfjnoHj-Wl-fCmpSEdCrM",
+    image: "https://drive.google.com/uc?export=view&id=1tX3rYal7HBYwfjnoHj-Wl-fCmpSEdCrM",
     scientificName: "Cucurbita pepo",
     family: "Cucurbitaceae",
     origin: "Orta ve Güney Amerika",
@@ -888,7 +888,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Biber",
     price: 10,
     description: "Güneydoğu Anadolu ve Akdeniz bölgelerinde yetiştirilen, acı ve aromatik bir biber türü. Olgunlaştığında kırmızıya dönen, yoğun kokulu ve lezzetlidir.",
-    image: "https://lh3.googleusercontent.com/d/1DwMHSepyOsTCQghfKfMnqMC7Sgz5jEAF",
+    image: "https://drive.google.com/uc?export=view&id=1DwMHSepyOsTCQghfKfMnqMC7Sgz5jEAF",
     scientificName: "Capsicum annuum",
     family: "Solanaceae",
     origin: "Gaziantep, Şanlıurfa ve Mersin civarı",
@@ -927,7 +927,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Salatalık",
     price: 20,
     description: "İnce, uzun ve çıtır yapısıyla bilinen Japonya kökenli salatalık türü. Az tohumlu, tatlı ve kabuğu soyulmadan tüketilebilen bir çeşittir.",
-    image: "https://lh3.googleusercontent.com/d/1vqSJMYKSeuIPm6oUanIxLCBwSKFlWOnH",
+    image: "https://drive.google.com/uc?export=view&id=1vqSJMYKSeuIPm6oUanIxLCBwSKFlWOnH",
     scientificName: "Cucumis sativus var. longissimus",
     family: "Cucurbitaceae",
     origin: "Japonya",
@@ -966,7 +966,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Tatsoi",
     price: 10,
     description: "Koyu yeşil, kaşık şeklinde yaprakları olan Asya kökenli besleyici bir sebze. Hafif tatlı ve cevizsi aromasıyla hem çiğ hem pişirilerek tüketilir.",
-    image: "https://lh3.googleusercontent.com/d/1zDra20J3meDqHjTtAcrsyi8ilgPRt2RZ",
+    image: "https://drive.google.com/uc?export=view&id=1zDra20J3meDqHjTtAcrsyi8ilgPRt2RZ",
     scientificName: "Brassica rapa var. narinosa",
     family: "Brassicaceae (Çin lahanası ailesi)",
     origin: "Asya",
@@ -1004,7 +1004,7 @@ const PRODUCTS: Product[] = [
     category: "Böcekler",
     price: 200,
     description: "Dünyadaki en ilginç kamuflaj ustası böceklerden biri. Vücudu kurumuş yaprak veya dal parçasına benzer, üzerinde diken benzeri çıkıntılar vardır.",
-    image: "https://lh3.googleusercontent.com/d/1_6qnMtG8RdXTq6JD1IYbzlq75v1VHJl-",
+    image: "https://drive.google.com/uc?export=view&id=1_6qnMtG8RdXTq6JD1IYbzlq75v1VHJl-",
     scientificName: "Extatosoma tiaratum",
     family: "Phasmatidae",
     origin: "Avustralya ve Yeni Gine",
@@ -1038,7 +1038,7 @@ const PRODUCTS: Product[] = [
     category: "Böcekler",
     price: 450,
     description: "Başlangıç seviyesi için en ideal çubuk böceği türüdür. İnce, uzun ve dal şeklinde bir vücuda sahiptir. Çok dayanıklı ve hızlı üreyen bir türdür.",
-    image: "https://lh3.googleusercontent.com/d/1jptsEEfLzoHTR4_wrSszf7FQ7f8XPw4D",
+    image: "https://drive.google.com/uc?export=view&id=1jptsEEfLzoHTR4_wrSszf7FQ7f8XPw4D",
     scientificName: "Medauroidea extradentata",
     family: "Phasmatidae",
     origin: "Vietnam",
@@ -1124,7 +1124,6 @@ const InsectSpotlight = ({ onCategorySelect, onDiscoverClick }: { onCategorySele
           src="https://images.unsplash.com/photo-1534329535363-57c58eb3c3b5?auto=format&fit=crop&q=80&w=2000" 
           alt="Insect Background" 
           className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
         />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1210,7 +1209,7 @@ const Navbar = ({
               style={{ width: '100px', height: 'auto', aspectRatio: '1/1' }}
             >
               <img 
-                src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
+                src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                 alt="Green World Logo" 
                 className="w-full h-full object-contain scale-110"
                 referrerPolicy="no-referrer"
@@ -1341,12 +1340,11 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
     <section className="relative pt-40 pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(249,212,35,0.05),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(62,142,65,0.05),transparent_50%)]" />
       
-      <div className="absolute top-0 right-0 -z-10 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
+      <div className="absolute top-0 right-0 z-0 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
         <img 
           src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000" 
           alt="Tree" 
           className="w-full h-full object-cover lg:rounded-bl-[120px]"
-          referrerPolicy="no-referrer"
         />
       </div>
       
@@ -1453,7 +1451,8 @@ const ProductCard = ({ product, onInfoClick, onAddToCart }: { product: Product; 
           src={product.image} 
           alt={product.name} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-          referrerPolicy="no-referrer"
+          referrerPolicy="no-referrer-when-downgrade"
+          crossOrigin="anonymous"
         />
         <div className="absolute top-4 left-4 flex flex-col gap-2">
           <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-brand-green text-[9px] font-bold rounded-lg uppercase tracking-widest shadow-sm border border-brand-green/5">
@@ -1526,7 +1525,8 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                 src={product.image} 
                 alt={product.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                referrerPolicy="no-referrer"
+                referrerPolicy="no-referrer-when-downgrade"
+                crossOrigin="anonymous"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-green/60 via-transparent to-transparent opacity-60" />
               
@@ -1762,7 +1762,12 @@ const CartModal = ({
           <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2 no-scrollbar mb-10">
             {cart.map((item) => (
               <div key={item.id} className="flex items-center gap-4 bg-white p-4 rounded-2xl border border-brand-green/5 shadow-sm">
-                <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded-xl" />
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="w-16 h-16 object-cover rounded-xl" 
+                  referrerPolicy="no-referrer"
+                />
                 <div className="flex-grow">
                   <h4 className="font-serif font-bold text-brand-green text-lg">{item.name}</h4>
                   <p className="text-brand-leaf font-bold text-sm">{item.price} ₺</p>
@@ -1864,7 +1869,7 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
             style={{ width: '140px', height: 'auto', aspectRatio: '1/1' }}
           >
             <img 
-              src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
+              src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
               alt="Green World Logo" 
               className="w-full h-full object-contain scale-110"
               referrerPolicy="no-referrer"
@@ -1920,7 +1925,7 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
                 style={{ width: '100px', height: 'auto', aspectRatio: '1/1' }}
               >
                 <img 
-                  src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
+                  src="https://drive.google.com/uc?export=view&id=1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                   alt="Green World Logo" 
                   className="w-full h-full object-contain scale-110"
                   referrerPolicy="no-referrer"
