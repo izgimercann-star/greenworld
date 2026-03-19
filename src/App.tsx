@@ -1003,7 +1003,7 @@ const PRODUCTS: Product[] = [
     id: "b1",
     name: "Dev Dikenli Yaprak Böceği",
     category: "Böcekler",
-    price: 200,
+    price: 250,
     description: "Dünyadaki en ilginç kamuflaj ustası böceklerden biri. Vücudu kurumuş yaprak veya dal parçasına benzer, üzerinde diken benzeri çıkıntılar vardır.",
     image: "https://lh3.googleusercontent.com/d/1_6qnMtG8RdXTq6JD1IYbzlq75v1VHJl-",
     scientificName: "Extatosoma tiaratum",
@@ -1033,7 +1033,7 @@ const PRODUCTS: Product[] = [
     id: "b2",
     name: "Vietnam Çubuk Böceği",
     category: "Böcekler",
-    price: 450,
+    price: 500,
     description: "Başlangıç seviyesi için en ideal çubuk böceği türüdür. İnce, uzun ve dal şeklinde bir vücuda sahiptir. Çok dayanıklı ve hızlı üreyen bir türdür.",
     image: "https://lh3.googleusercontent.com/d/1jptsEEfLzoHTR4_wrSszf7FQ7f8XPw4D",
     scientificName: "Medauroidea extradentata",
@@ -1359,6 +1359,7 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white/40 backdrop-blur-md p-8 md:p-12 rounded-[3rem] border border-white/40 shadow-2xl inline-block"
           >
             <div className="flex items-center gap-4 mb-6 md:mb-8">
               <div className="flex items-center gap-2">
@@ -1373,13 +1374,13 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-bold leading-[1.1] md:leading-[0.95] mb-6 md:mb-8 text-brand-green tracking-tighter">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-bold leading-[1.1] md:leading-[0.95] mb-6 md:mb-8 text-black tracking-tighter drop-shadow-sm">
               Doğanın <br />
               <span className="italic text-brand-leaf font-medium">Eşsiz</span> <br />
               Dengesi
             </h1>
             
-            <p className="text-base md:text-xl text-black mb-8 md:mb-12 leading-relaxed max-w-xl">
+            <p className="text-base md:text-xl text-black mb-8 md:mb-12 leading-relaxed max-w-xl font-medium">
               Atalık tohumlarımızla toprağa hayat verin, egzotik dostlarımızla 
               doğanın gizemli dünyasını keşfedin. Yaşamın her formuna saygıyla.
             </p>
@@ -1702,7 +1703,7 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
               {/* Footer Action */}
               <div className="mt-16 pt-10 border-t border-brand-green/10 flex flex-col sm:flex-row items-center justify-between gap-8">
                 <div className="text-center sm:text-left">
-                  <span className="block text-[10px] font-bold uppercase tracking-widest text-brand-earth/60 mb-2">Paket Fiyatı</span>
+                  <span className="block text-[10px] font-bold uppercase tracking-widest text-brand-earth/60 mb-2">Birim Fiyatı</span>
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold text-brand-green">{product.price}</span>
                     <span className="text-xl font-bold text-brand-green">₺</span>
@@ -2062,7 +2063,7 @@ export default function App() {
     const filtered = PRODUCTS.filter(p => {
       const matchesCategory = selectedCategory 
         ? p.category === selectedCategory 
-        : p.category !== "Böcekler";
+        : true;
       const matchesSubCategory = selectedSubCategory 
         ? p.subCategory === selectedSubCategory 
         : true;
@@ -2070,12 +2071,12 @@ export default function App() {
       return matchesCategory && matchesSubCategory && matchesSearch;
     });
 
-    // Sort products: Böcekler first if selected, else Sebzeler first, then Meyveler.
+    // Sort products: Sebzeler first, then Meyveler, then Böcekler (if in 'Hepsi' view).
     return [...filtered].sort((a, b) => {
-      // Category priority: Böcekler (0) < Sebzeler (1) < Meyveler (2)
+      // Category priority: Sebzeler (0) < Meyveler (1) < Böcekler (2)
       const categoryPriority = (cat: Category) => {
-        if (cat === "Böcekler") return 0;
-        if (cat === "Sebzeler") return 1;
+        if (cat === "Sebzeler") return 0;
+        if (cat === "Meyveler") return 1;
         return 2;
       };
 
