@@ -1343,14 +1343,21 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(249,212,35,0.05),transparent_50%),radial-gradient(circle_at_bottom_left,rgba(62,142,65,0.05),transparent_50%)]" />
       
-      <div className="absolute top-0 right-0 -z-10 w-full lg:w-5/12 h-full opacity-30 lg:opacity-20 transition-opacity duration-500">
-        <img 
-          src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000" 
-          alt="Tree" 
-          className="w-full h-full object-cover lg:rounded-bl-[120px]"
-          referrerPolicy="no-referrer"
-          loading="eager"
-        />
+      <div className="absolute top-0 right-0 -z-10 w-full lg:w-8/12 h-full opacity-95 lg:opacity-90 transition-all duration-1000 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/10 to-white z-10" />
+        <motion.div 
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="w-full h-full"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2000" 
+            alt="Forest" 
+            className="w-full h-full object-cover lg:rounded-bl-[120px] saturate-[1.4] contrast-[1.2] brightness-[1.02]"
+            referrerPolicy="no-referrer"
+            loading="eager"
+          />
+        </motion.div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
