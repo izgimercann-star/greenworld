@@ -1401,7 +1401,7 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
               </button>
               <button 
                 onClick={onAboutOpen}
-                className="w-full sm:w-auto px-8 md:px-10 py-4 border border-brand-green/20 text-brand-green rounded-full font-bold hover:bg-brand-green hover:text-brand-cream transition-all duration-300"
+                className="w-full sm:w-auto px-8 md:px-10 py-4 gradient-leaf text-brand-cream rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Hikayemiz
               </button>
@@ -2003,7 +2003,7 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
         
         <div className="pt-10 border-t border-brand-cream/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-medium uppercase tracking-widest text-brand-cream/30">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-            <p>© 2024 Green World.</p>
+            <p>© 2026 Green World.</p>
             <div className="hidden md:block w-1 h-1 rounded-full bg-brand-cream/20" />
             <p className="text-brand-sun font-bold">MERCAN İZGİ</p>
           </div>
