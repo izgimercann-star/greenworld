@@ -1213,7 +1213,7 @@ const Navbar = ({
               <img 
                 src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                 alt="Green World Logo" 
-                className="w-full h-full object-contain scale-110"
+                className="w-full h-full object-cover scale-[1.35]"
                 referrerPolicy="no-referrer"
                 loading="eager"
               />
@@ -1884,7 +1884,7 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
             <img 
               src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
               alt="Green World Logo" 
-              className="w-full h-full object-contain scale-110"
+              className="w-full h-full object-cover scale-[1.35]"
               referrerPolicy="no-referrer"
               loading="lazy"
             />
@@ -1941,7 +1941,7 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
                 <img 
                   src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                   alt="Green World Logo" 
-                  className="w-full h-full object-contain scale-110"
+                  className="w-full h-full object-cover scale-[1.35]"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
