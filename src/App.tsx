@@ -18,7 +18,8 @@ import {
   Utensils,
   Globe,
   Clock,
-  Thermometer
+  Thermometer,
+  Heart
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -1008,26 +1009,22 @@ const PRODUCTS: Product[] = [
     scientificName: "Extatosoma tiaratum",
     family: "Phasmatidae",
     origin: "Avustralya ve Yeni Gine",
-    plantingSeason: "Yıl Boyu",
-    harvestTime: "Ömür: 12-18 Ay",
+    plantingSeason: "",
+    harvestTime: "",
     difficulty: "Orta",
-    soilType: "Hindistan cevizi torfu ve dikey dallar",
+    soilType: "Orta boy ve yapraklı bir teraryum",
     watering: "Haftada 2-3 kez fısfıs",
-    sunlight: "Oda sıcaklığı (20-26°C)",
+    sunlight: "Gündüzü ve geceyi ayırt edebilecek şekilde",
     tips: "Okaliptüs, böğürtlen ve gül yaprakları ile beslenirler. Dişiler erkek olmadan da yumurta bırakabilir (Partenogenez).",
-    healthBenefits: [
-      "Eşsiz kamuflaj yeteneği",
-      "Sakin ve zararsız doğa",
-      "İlginç savunma davranışları",
-      "Kolay gözlemlenebilir yaşam döngüsü"
-    ],
+    healthBenefits: [],
     usage: [
-      "Teraryum hobisi",
-      "Eğitim ve biyoloji dersleri",
-      "Makro fotoğrafçılık"
+      "Haftalık teraryum temizliği",
+      "Dikey tırmanma dalları sağlanmalı",
+      "Yüksek nem dengesi korunmalı",
+      "Düzenli havalandırma"
     ],
     nutritionalValue: [
-      { label: "Beslenme", value: "Otçul (Yaprak)" },
+      { label: "Beslenme", value: "Böğürtlen, Gül, Ahududu, Okaliptüs Yaprağı" },
       { label: "Boyut", value: "15-20 cm (Dişi)" },
       { label: "Aktivite", value: "Gececil" }
     ]
@@ -1042,26 +1039,22 @@ const PRODUCTS: Product[] = [
     scientificName: "Medauroidea extradentata",
     family: "Phasmatidae",
     origin: "Vietnam",
-    plantingSeason: "Yıl Boyu",
-    harvestTime: "Ömür: 8-12 Ay",
+    plantingSeason: "",
+    harvestTime: "",
     difficulty: "Kolay",
-    soilType: "Kağıt havlu veya hafif torf",
-    watering: "Haftada 3-4 kez hafif sisleme",
-    sunlight: "Oda sıcaklığı (20-26°C)",
+    soilType: "Orta boy ve yapraklı bir teraryum",
+    watering: "Haftada 2-3 kez fısfıs",
+    sunlight: "Gündüzü ve geceyi ayırt edebilecek şekilde",
     tips: "Böğürtlen, ahududu ve gül yaprakları en sevdiği besinlerdir. Gece aktiftirler, gündüz dal gibi hareketsiz kalırlar.",
-    healthBenefits: [
-      "Yeni başlayanlar için ideal",
-      "Hızlı ve kolay üreme",
-      "Minimum bakım ihtiyacı",
-      "Zararsız ve sakin yapı"
-    ],
+    healthBenefits: [],
     usage: [
-      "Hobiye başlangıç",
-      "Okul projeleri",
-      "Laboratuvar araştırmaları"
+      "Günlük nem kontrolü",
+      "Taze yaprak temini",
+      "Dikey yaşam alanı",
+      "Kolay temizlenebilir taban"
     ],
     nutritionalValue: [
-      { label: "Beslenme", value: "Otçul (Yaprak)" },
+      { label: "Beslenme", value: "Böğürtlen, Gül, Ahududu, Okaliptüs Yaprağı" },
       { label: "Boyut", value: "10-12 cm" },
       { label: "Aktivite", value: "Gececil" }
     ]
@@ -1386,7 +1379,7 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
               Dengesi
             </h1>
             
-            <p className="text-base md:text-xl text-brand-earth mb-8 md:mb-12 leading-relaxed max-w-xl">
+            <p className="text-base md:text-xl text-black mb-8 md:mb-12 leading-relaxed max-w-xl">
               Atalık tohumlarımızla toprağa hayat verin, egzotik dostlarımızla 
               doğanın gizemli dünyasını keşfedin. Yaşamın her formuna saygıyla.
             </p>
@@ -1584,11 +1577,11 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
               {/* Quick Stats Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
                 {[
-                  { label: "Ekim", value: product.plantingSeason, icon: Clock },
-                  { label: "Hasat", value: product.harvestTime, icon: Clock },
-                  { label: "Zorluk", value: product.difficulty, icon: Activity },
-                  { label: "Güneş", value: product.sunlight, icon: Sun }
-                ].map((item, i) => (
+                  { label: "Ekim", value: product.plantingSeason, icon: Clock, show: product.category !== "Böcekler" },
+                  { label: "Hasat", value: product.harvestTime, icon: Clock, show: product.category !== "Böcekler" },
+                  { label: "Zorluk", value: product.difficulty, icon: Activity, show: true },
+                  { label: "Güneş", value: product.sunlight, icon: Sun, show: product.category !== "Böcekler" }
+                ].filter(item => item.show).map((item, i) => (
                   <div key={i} className="bg-white p-4 rounded-2xl border border-brand-green/5 shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex items-center gap-2 mb-2 text-brand-leaf/60">
                       <item.icon size={14} />
@@ -1613,16 +1606,27 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                         <Droplets size={18} />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold text-brand-green mb-1">Sulama İhtiyacı</h4>
+                        <h4 className="text-xs font-bold text-brand-green mb-1">{product.category === "Böcekler" ? "Nem İhtiyacı" : "Sulama İhtiyacı"}</h4>
                         <p className="text-sm text-brand-earth/80 leading-relaxed">{product.watering}</p>
                       </div>
                     </div>
+                    {product.category === "Böcekler" && (
+                      <div className="flex gap-4">
+                        <div className="w-10 h-10 rounded-full bg-brand-earth/5 flex items-center justify-center text-brand-earth shrink-0">
+                          <Sun size={18} />
+                        </div>
+                        <div>
+                          <h4 className="text-xs font-bold text-brand-green mb-1">Işık İhtiyacı</h4>
+                          <p className="text-sm text-brand-earth/80 leading-relaxed">{product.sunlight}</p>
+                        </div>
+                      </div>
+                    )}
                     <div className="flex gap-4">
                       <div className="w-10 h-10 rounded-full bg-brand-earth/5 flex items-center justify-center text-brand-earth shrink-0">
                         <Thermometer size={18} />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold text-brand-green mb-1">Toprak Tercihi</h4>
+                        <h4 className="text-xs font-bold text-brand-green mb-1">{product.category === "Böcekler" ? "Yaşam Alanı" : "Toprak Tercihi"}</h4>
                         <p className="text-sm text-brand-earth/80 leading-relaxed">{product.soilType}</p>
                       </div>
                     </div>
@@ -1639,9 +1643,9 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                 </section>
 
                 {/* Benefits & Usage */}
-                {(product.healthBenefits || product.usage) && (
+                {((product.healthBenefits && product.healthBenefits.length > 0) || (product.usage && product.usage.length > 0)) && (
                   <section className="grid md:grid-cols-2 gap-8">
-                    {product.healthBenefits && (
+                    {product.healthBenefits && product.healthBenefits.length > 0 && (
                       <div>
                         <h3 className="text-xs font-bold uppercase tracking-widest text-brand-green mb-4 flex items-center gap-2">
                           <Activity size={16} className="text-brand-bloom" />
@@ -1657,11 +1661,11 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                         </ul>
                       </div>
                     )}
-                    {product.usage && (
+                    {product.usage && product.usage.length > 0 && (
                       <div>
                         <h3 className="text-xs font-bold uppercase tracking-widest text-brand-green mb-4 flex items-center gap-2">
-                          <Utensils size={16} className="text-brand-sun" />
-                          Kullanım
+                          {product.category === "Böcekler" ? <Heart size={16} className="text-brand-sun" /> : <Utensils size={16} className="text-brand-sun" />}
+                          {product.category === "Böcekler" ? "Bakım" : "Kullanım"}
                         </h3>
                         <ul className="space-y-2">
                           {product.usage.map((use, i) => (
@@ -1681,7 +1685,7 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                   <section>
                     <h3 className="text-xs font-bold uppercase tracking-widest text-brand-green mb-6 flex items-center gap-3">
                       <span className="w-8 h-px bg-brand-leaf/30" />
-                      Besin Değerleri (100g)
+                      {product.category === "Böcekler" ? "Beslenme & Özellikler" : "Besin Değerleri (100g)"}
                     </h3>
                     <div className="flex flex-wrap gap-3">
                       {product.nutritionalValue.map((item, i) => (
