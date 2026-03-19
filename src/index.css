@@ -29,6 +29,29 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif tracking-tight font-bold;
   }
+
+  img {
+    @apply max-w-full h-auto block;
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Professional Image & Mobile Fixes */
+@media (max-width: 768px) {
+  .mobile-image-container {
+    @apply aspect-[4/3] w-full relative overflow-hidden;
+  }
+  
+  /* Ensure images are never hidden on mobile */
+  img {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* Fix for Google Drive images potentially having issues with aspect-ratio in some mobile browsers */
+[class*="aspect-"] {
+  min-height: 1px;
 }
 
 .glass-card {

@@ -1124,6 +1124,8 @@ const InsectSpotlight = ({ onCategorySelect, onDiscoverClick }: { onCategorySele
           src="https://images.unsplash.com/photo-1534329535363-57c58eb3c3b5?auto=format&fit=crop&q=80&w=2000" 
           alt="Insect Background" 
           className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+          loading="lazy"
         />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1212,6 +1214,8 @@ const Navbar = ({
                 src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                 alt="Green World Logo" 
                 className="w-full h-full object-contain scale-110"
+                referrerPolicy="no-referrer"
+                loading="eager"
               />
             </div>
             <div className="flex flex-col">
@@ -1344,6 +1348,8 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
           src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000" 
           alt="Tree" 
           className="w-full h-full object-cover lg:rounded-bl-[120px]"
+          referrerPolicy="no-referrer"
+          loading="eager"
         />
       </div>
       
@@ -1445,11 +1451,13 @@ const ProductCard = ({ product, onInfoClick, onAddToCart }: { product: Product; 
     <div 
       className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-brand-green/5 h-full flex flex-col"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
         <img 
           src={product.image} 
           alt={product.name} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          referrerPolicy="no-referrer"
+          loading="lazy"
         />
         <div className="absolute top-4 left-4 flex flex-col gap-2">
           <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-brand-green text-[9px] font-bold rounded-lg uppercase tracking-widest shadow-sm border border-brand-green/5">
@@ -1517,11 +1525,13 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
         <div className="flex flex-col lg:flex-row h-full max-h-[90vh]">
           {/* Left Side: Image & Quick Info */}
           <div className="lg:w-5/12 relative bg-white flex flex-col shrink-0">
-            <div className="aspect-square sm:aspect-video lg:aspect-auto lg:h-full relative overflow-hidden group">
+            <div className="aspect-square sm:aspect-video lg:aspect-auto lg:h-full relative overflow-hidden group bg-neutral-100">
               <img 
                 src={product.image} 
                 alt={product.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                referrerPolicy="no-referrer"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-green/60 via-transparent to-transparent opacity-60" />
               
@@ -1761,6 +1771,8 @@ const CartModal = ({
                   src={item.image} 
                   alt={item.name} 
                   className="w-16 h-16 object-cover rounded-xl" 
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <div className="flex-grow">
                   <h4 className="font-serif font-bold text-brand-green text-lg">{item.name}</h4>
@@ -1866,6 +1878,8 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
               src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
               alt="Green World Logo" 
               className="w-full h-full object-contain scale-110"
+              referrerPolicy="no-referrer"
+              loading="lazy"
             />
           </div>
           <h2 className="text-4xl font-serif font-bold text-brand-green mb-4">Hikayemiz</h2>
@@ -1921,6 +1935,8 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
                   src="https://lh3.googleusercontent.com/d/1qoAJaUUiyoZEI96jVBEvBwZXH_vRsE6L" 
                   alt="Green World Logo" 
                   className="w-full h-full object-contain scale-110"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
               <span className="text-2xl md:text-3xl font-serif font-bold tracking-tight">Green World</span>
