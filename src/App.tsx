@@ -46,7 +46,10 @@ type SubCategoryType =
   | "Kıvırcık" 
   | "Ispanak"
   | "Karpuz"
-  | "Göbek";
+  | "Göbek"
+  | "Canlı Yemler / Hamam Böcekleri"
+  | "Isopod / Çok Bacaklılar"
+  | "Tiaratum / Yaprak Böceği";
 
 interface Product {
   id: string;
@@ -196,7 +199,7 @@ const PRODUCTS: Product[] = [
     name: "Carolina Reaper Biber Tohumu 🌶️🔥",
     category: "Sebzeler",
     subCategory: "Biber",
-    price: 25,
+    price: 20,
     description: "Carolina Reaper, dünyadaki en acı biberlerden biridir. Aşırı acılığı ve karakteristik kuyruklu (stinger) şekli ile tanınan bu efsanevi biberin tohumudur.",
     image: "https://lh3.googleusercontent.com/d/1xJXeowGC8-tIiPsHFgf1iYAM-Z4CeGWt",
     scientificName: "Capsicum chinense",
@@ -1003,6 +1006,7 @@ const PRODUCTS: Product[] = [
     id: "b1",
     name: "Dev Dikenli Yaprak Böceği",
     category: "Böcekler",
+    subCategory: "Tiaratum / Yaprak Böceği",
     price: 250,
     description: "Dünyadaki en ilginç kamuflaj ustası böceklerden biri. Vücudu kurumuş yaprak veya dal parçasına benzer, üzerinde diken benzeri çıkıntılar vardır.",
     image: "https://lh3.googleusercontent.com/d/1_6qnMtG8RdXTq6JD1IYbzlq75v1VHJl-",
@@ -1031,32 +1035,157 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "b2",
-    name: "Vietnam Çubuk Böceği",
+    name: "Dubia Hamamböceği",
     category: "Böcekler",
-    price: 500,
-    description: "Başlangıç seviyesi için en ideal çubuk böceği türüdür. İnce, uzun ve dal şeklinde bir vücuda sahiptir. Çok dayanıklı ve hızlı üreyen bir türdür.",
-    image: "https://lh3.googleusercontent.com/d/1jptsEEfLzoHTR4_wrSszf7FQ7f8XPw4D",
-    scientificName: "Medauroidea extradentata",
-    family: "Phasmatidae",
-    origin: "Vietnam",
+    subCategory: "Canlı Yemler / Hamam Böcekleri",
+    price: 1.50,
+    description: "Dünyanın en popüler yem böceği türüdür. Bakımları kolay, besin değerleri yüksektir. Uçamazlar ve pürüzsüz yüzeylere tırmanamazlar. Koku ve ses yapmazlar.",
+    image: "https://lh3.googleusercontent.com/d/11IvU-A6MZ13UnbVl80bsVipK9-MZXDS7",
+    scientificName: "Blaptica dubia",
+    family: "Blaberidae",
+    origin: "Orta ve Güney Amerika",
     plantingSeason: "",
     harvestTime: "",
     difficulty: "Kolay",
-    soilType: "Orta boy ve yapraklı bir teraryum",
-    watering: "Haftada 2-3 kez fısfıs",
-    sunlight: "Gündüzü ve geceyi ayırt edebilecek şekilde",
-    tips: "Böğürtlen, ahududu ve gül yaprakları en sevdiği besinlerdir. Gece aktiftirler, gündüz dal gibi hareketsiz kalırlar.",
+    soilType: "Havalandırması iyi plastik kutu ve yumurta viyolleri",
+    watering: "Su ihtiyacı taze meyve/sebze veya su jelinden sağlanmalıdır",
+    sunlight: "Karanlık ortamları tercih ederler",
+    tips: "İstila riski düşüktür. Yetişkinler 1.5-2 yıl yaşayabilir. Protein oranı çok yüksektir ve sindirimi kolaydır.",
     healthBenefits: [],
     usage: [
-      "Günlük nem kontrolü",
-      "Taze yaprak temini",
-      "Dikey yaşam alanı",
-      "Kolay temizlenebilir taban"
+      "İdeal sıcaklık 25°C - 30°C",
+      "Nem oranı %40-60 arası",
+      "Taze havuç, elma, kabak ile besleme",
+      "Alerji riskine karşı eldiven kullanımı"
     ],
     nutritionalValue: [
-      { label: "Beslenme", value: "Böğürtlen, Gül, Ahududu, Okaliptüs Yaprağı" },
-      { label: "Boyut", value: "10-12 cm" },
-      { label: "Aktivite", value: "Gececil" }
+      { label: "Protein", value: "Çok Yüksek" },
+      { label: "Kitin Oranı", value: "Düşük (Kolay Sindirim)" },
+      { label: "Ömür", value: "1.5 - 2 Yıl" }
+    ]
+  },
+  {
+    id: "b3",
+    name: "Porcellio laevis 'Panda'",
+    category: "Böcekler",
+    subCategory: "Isopod / Çok Bacaklılar",
+    price: 9,
+    description: "İzopod hobisine yeni başlayanlar için ideal, eğlenceli ve dayanıklı bir türdür. Süt beyazı üzerine siyah lekeleriyle pandayı andırırlar. Mükemmel temizlikçi ekiptirler.",
+    image: "https://lh3.googleusercontent.com/d/1Yov0IikTiHQXzLdXYBjb-FGSG7e6WLFz",
+    scientificName: "Porcellio laevis",
+    family: "Porcellionidae",
+    origin: "Avrupa",
+    plantingSeason: "",
+    harvestTime: "",
+    difficulty: "Kolay",
+    soilType: "Nem tutma kapasitesi yüksek torf ve kuru yaprak karışımı",
+    watering: "Bir tarafı nemli, bir tarafı kuru tutulmalıdır",
+    sunlight: "Karanlık veya loş ortam",
+    tips: "Hızlı ve aktiftirler. Kalsiyum ihtiyaçları için sepia kemiği mutlaka bulunmalıdır. Makine gibi ürerler.",
+    healthBenefits: [],
+    usage: [
+      "İdeal sıcaklık 20-26°C",
+      "Nem oranı %50-70 arası",
+      "Haftada 1-2 kez protein desteği",
+      "Bolca kuru yaprak ve çürümüş odun"
+    ],
+    nutritionalValue: [
+      { label: "Boyut", value: "2 - 2.5 cm" },
+      { label: "Üreme Hızı", value: "Çok Hızlı" },
+      { label: "Karakter", value: "Aktif & Hızlı" }
+    ]
+  },
+  {
+    id: "b3_2",
+    name: "Porcellio laevis 'Panda'",
+    category: "Böcekler",
+    subCategory: "Canlı Yemler / Hamam Böcekleri",
+    price: 9,
+    description: "İzopod hobisine yeni başlayanlar için ideal, eğlenceli ve dayanıklı bir türdür. Süt beyazı üzerine siyah lekeleriyle pandayı andırırlar. Mükemmel temizlikçi ekiptirler.",
+    image: "https://lh3.googleusercontent.com/d/1Yov0IikTiHQXzLdXYBjb-FGSG7e6WLFz",
+    scientificName: "Porcellio laevis",
+    family: "Porcellionidae",
+    origin: "Avrupa",
+    plantingSeason: "",
+    harvestTime: "",
+    difficulty: "Kolay",
+    soilType: "Nem tutma kapasitesi yüksek torf ve kuru yaprak karışımı",
+    watering: "Bir tarafı nemli, bir tarafı kuru tutulmalıdır",
+    sunlight: "Karanlık veya loş ortam",
+    tips: "Hızlı ve aktiftirler. Kalsiyum ihtiyaçları için sepia kemiği mutlaka bulunmalıdır. Makine gibi ürerler.",
+    healthBenefits: [],
+    usage: [
+      "İdeal sıcaklık 20-26°C",
+      "Nem oranı %50-70 arası",
+      "Haftada 1-2 kez protein desteği",
+      "Bolca kuru yaprak ve çürümüş odun"
+    ],
+    nutritionalValue: [
+      { label: "Boyut", value: "2 - 2.5 cm" },
+      { label: "Üreme Hızı", value: "Çok Hızlı" },
+      { label: "Karakter", value: "Aktif & Hızlı" }
+    ]
+  },
+  {
+    id: "b4",
+    name: "Telodeinopus aoutii (Zeytin Yeşili Afrika Çıyanı)",
+    category: "Böcekler",
+    subCategory: "Isopod / Çok Bacaklılar",
+    price: 200,
+    description: "Hobi dünyasındaki en zarif ve barışçıl dev çıyan türlerinden biridir. Zeytin yeşili gövdesi ve tırmanma yeteneğiyle bilinir. Isırma huyu yoktur.",
+    image: "https://lh3.googleusercontent.com/d/19mzuWL5TWItGFcGaHWyPns_dIQryLuUc",
+    scientificName: "Telodeinopus aoutii",
+    family: "Spirostreptidae",
+    origin: "Batı Afrika (Gana, Togo)",
+    plantingSeason: "",
+    harvestTime: "",
+    difficulty: "Kolay",
+    soilType: "10-15 cm derinliğinde steril toprak ve yaprak çürüntüsü",
+    watering: "Günde bir kez hafif fısfıs, toprak nemli kalmalı",
+    sunlight: "Gececil, doğrudan güneşten uzak",
+    tips: "Tırmanmayı çok severler. Panda isopodlar ile aynı teraryumda beslenebilirler. 5-7 yıl yaşayabilirler.",
+    healthBenefits: [],
+    usage: [
+      "İdeal sıcaklık 22-26°C",
+      "Nem oranı %70-80 arası",
+      "Bolca kalsiyum (sepia kemiği)",
+      "Taze salatalık, kabak ve mantar"
+    ],
+    nutritionalValue: [
+      { label: "Boyut", value: "15 - 20 cm" },
+      { label: "Ömür", value: "5 - 7 Yıl" },
+      { label: "Karakter", value: "Barışçıl & Uysal" }
+    ]
+  },
+  {
+    id: "b5",
+    name: "Morio Kurdu",
+    category: "Böcekler",
+    subCategory: "Canlı Yemler / Hamam Böcekleri",
+    price: 0.15,
+    description: "Hobi dünyasında 'Giant Mealworm' (Dev Un Kurdu) olarak da bilinen, besin değeri yüksek ve hareketli bir yem böceğidir. Un kurtlarından daha büyük ve agresiftirler.",
+    image: "https://lh3.googleusercontent.com/d/18MjGtsHJwO6uA60AvVyQFjfgQE1SFeyk",
+    scientificName: "Zophobas morio",
+    family: "Tenebrionidae",
+    origin: "Orta ve Güney Amerika",
+    plantingSeason: "",
+    harvestTime: "",
+    difficulty: "Kolay",
+    soilType: "Yulaf ezmesi, buğday kepeği veya mısır unu yataklığı",
+    watering: "Nem ihtiyacı taze patates, havuç veya elma dilimlerinden sağlanır",
+    sunlight: "Oda sıcaklığında, doğrudan güneşten uzak",
+    tips: "Buzdolabına konulmamalıdırlar, soğuğa hassastırlar. Güçlü çeneleri vardır, besleme sırasında dikkat edilmelidir.",
+    healthBenefits: [],
+    usage: [
+      "İdeal sıcaklık 22-27°C",
+      "Yataklık aynı zamanda besindir",
+      "Taze sebze ile su ihtiyacı karşılama",
+      "Pupa için tek başına ayırma gerekir"
+    ],
+    nutritionalValue: [
+      { label: "Boyut", value: "5 - 6 cm" },
+      { label: "Besin Değeri", value: "Yüksek Yağ & Protein" },
+      { label: "Karakter", value: "Agresif & Hareketli" }
     ]
   }
 ];
@@ -2042,6 +2171,12 @@ export default function App() {
     "Karpuz"
   ];
 
+  const insectTypes: SubCategoryType[] = [
+    "Canlı Yemler / Hamam Böcekleri",
+    "Isopod / Çok Bacaklılar",
+    "Tiaratum / Yaprak Böceği"
+  ];
+
   const subCategoryOrder: Record<string, number> = {
     "Domates": 1,
     "Biber": 2,
@@ -2063,7 +2198,7 @@ export default function App() {
     const filtered = PRODUCTS.filter(p => {
       const matchesCategory = selectedCategory 
         ? p.category === selectedCategory 
-        : true;
+        : p.category !== "Böcekler"; // Exclude insects from 'All' view
       const matchesSubCategory = selectedSubCategory 
         ? p.subCategory === selectedSubCategory 
         : true;
@@ -2193,32 +2328,54 @@ export default function App() {
 
             <div className="flex flex-col gap-6 mb-12">
               <div className="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+                {selectedCategory !== "Böcekler" && (
+                  <>
+                    <button 
+                      onClick={() => handleCategoryChange(null)}
+                      className={cn(
+                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
+                        !selectedCategory ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
+                      )}
+                    >
+                      Hepsi
+                    </button>
+                    <button 
+                      onClick={() => handleCategoryChange("Sebzeler")}
+                      className={cn(
+                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
+                        selectedCategory === "Sebzeler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
+                      )}
+                    >
+                      Sebzeler
+                    </button>
+                    <button 
+                      onClick={() => handleCategoryChange("Meyveler")}
+                      className={cn(
+                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
+                        selectedCategory === "Meyveler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
+                      )}
+                    >
+                      Meyveler
+                    </button>
+                  </>
+                )}
+                {selectedCategory === "Böcekler" && (
+                  <button 
+                    onClick={() => handleCategoryChange(null)}
+                    className="px-6 py-2 rounded-full font-medium bg-brand-cream text-brand-green hover:bg-brand-green/5 transition-all whitespace-nowrap flex items-center gap-2"
+                  >
+                    <ChevronRight className="rotate-180" size={16} />
+                    Geri Dön
+                  </button>
+                )}
                 <button 
-                  onClick={() => handleCategoryChange(null)}
+                  onClick={() => handleCategoryChange("Böcekler")}
                   className={cn(
                     "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                    !selectedCategory ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
+                    selectedCategory === "Böcekler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
                   )}
                 >
-                  Hepsi
-                </button>
-                <button 
-                  onClick={() => handleCategoryChange("Sebzeler")}
-                  className={cn(
-                    "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                    selectedCategory === "Sebzeler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
-                  )}
-                >
-                  Sebzeler
-                </button>
-                <button 
-                  onClick={() => handleCategoryChange("Meyveler")}
-                  className={cn(
-                    "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                    selectedCategory === "Meyveler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
-                  )}
-                >
-                  Meyveler
+                  Böcekler
                 </button>
               </div>
 
@@ -2268,6 +2425,36 @@ export default function App() {
                     Tüm Meyveler
                   </button>
                   {fruitTypes.map((type) => (
+                    <button 
+                      key={type}
+                      onClick={() => setSelectedSubCategory(type)}
+                      className={cn(
+                        "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
+                        selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                      )}
+                    >
+                      {type}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+
+              {selectedCategory === "Böcekler" && (
+                <motion.div 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex gap-3 overflow-x-auto pb-2 no-scrollbar border-t border-brand-green/5 pt-6"
+                >
+                  <button 
+                    onClick={() => setSelectedSubCategory(null)}
+                    className={cn(
+                      "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
+                      !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                    )}
+                  >
+                    Tüm Böcekler
+                  </button>
+                  {insectTypes.map((type) => (
                     <button 
                       key={type}
                       onClick={() => setSelectedSubCategory(type)}
