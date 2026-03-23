@@ -204,7 +204,7 @@ const PRODUCTS: Product[] = [
     image: "https://lh3.googleusercontent.com/d/1xJXeowGC8-tIiPsHFgf1iYAM-Z4CeGWt",
     scientificName: "Capsicum chinense",
     family: "Solanaceae",
-    origin: "South Carolina, ABD (PuckerButt Pepper Company - Ed Currie)",
+    origin: "",
     plantingSeason: "İlkbahar",
     harvestTime: "90-120 Gün",
     difficulty: "Zor",
@@ -1349,14 +1349,14 @@ const Navbar = ({
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center gap-8">
-              {["Anasayfa", "Böcekler", "Sebzeler", "Meyveler", "Hakkımızda"].map((item) => (
+              {["Anasayfa", "Tohumlar", "Böcekler", "Hakkımızda"].map((item) => (
                 <button 
                   key={item}
                   onClick={() => {
                     if (item === "Hakkımızda") onAboutOpen();
                     else if (item === "Anasayfa") onCategorySelect(null);
+                    else if (item === "Tohumlar") onCategorySelect(null);
                     else if (item === "Böcekler") onCategorySelect("Böcekler");
-                    else onCategorySelect(item as Category);
                   }} 
                   className="text-brand-green/70 hover:text-brand-green transition-colors text-xs font-bold uppercase tracking-widest relative group"
                 >
@@ -1435,9 +1435,8 @@ const Navbar = ({
             className="md:hidden bg-brand-cream border-b border-brand-green/10 p-4 space-y-4"
           >
             <button onClick={() => { onCategorySelect(null); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Anasayfa</button>
+            <button onClick={() => { onCategorySelect(null); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Tohumlar</button>
             <button onClick={() => { onCategorySelect("Böcekler"); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Böcekler</button>
-            <button onClick={() => { onCategorySelect("Sebzeler"); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Sebzeler</button>
-            <button onClick={() => { onCategorySelect("Meyveler"); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Meyveler</button>
             <button onClick={() => { onAboutOpen(); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Hakkımızda</button>
             <div className="flex items-center gap-2 bg-brand-green text-brand-cream px-4 py-3 rounded-xl text-sm font-medium">
               <Phone size={16} />
@@ -2109,9 +2108,8 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
             <h4 className="text-sm font-bold uppercase tracking-widest mb-8 text-brand-sun">Hızlı Linkler</h4>
             <ul className="space-y-4 text-brand-cream/60 text-sm">
               <li><button onClick={() => { onCategorySelect(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-brand-sun transition-colors">Anasayfa</button></li>
+              <li><button onClick={() => { onCategorySelect(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-brand-sun transition-colors">Tohumlar</button></li>
               <li><button onClick={() => { onCategorySelect("Böcekler"); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-brand-sun transition-colors">Böcekler</button></li>
-              <li><button onClick={() => { onCategorySelect("Sebzeler"); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-brand-sun transition-colors">Sebze Tohumları</button></li>
-              <li><button onClick={() => { onCategorySelect("Meyveler"); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-brand-sun transition-colors">Meyve Tohumları</button></li>
               <li><button onClick={onAboutOpen} className="hover:text-brand-sun transition-colors">Hakkımızda</button></li>
             </ul>
           </div>
@@ -2310,7 +2308,7 @@ export default function App() {
                 <p className="text-brand-earth max-w-xl">
                   {selectedCategory === "Böcekler" 
                     ? "Birçok ülkeden farklı türler ile en iyisini sunuyoruz." 
-                    : "Özenle seçilmiş, yüksek çimlenme oranına sahip tohumlarımızla kendi bahçenizi kurun."}
+                    : "Özenle seçilmiş tohumlarımız ve egzotik böcek koleksiyonumuzla doğayı keşfedin."}
                 </p>
               </div>
               
@@ -2327,47 +2325,24 @@ export default function App() {
             </div>
 
             <div className="flex flex-col gap-6 mb-12">
+              {!selectedCategory && (
+                <div className="flex items-center justify-between md:hidden px-1">
+                  <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest">Kategoriler</span>
+                  <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest flex items-center gap-1 animate-pulse">
+                    Yana Kaydır <ChevronRight size={12} />
+                  </span>
+                </div>
+              )}
               <div className="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
-                {selectedCategory !== "Böcekler" && (
-                  <>
-                    <button 
-                      onClick={() => handleCategoryChange(null)}
-                      className={cn(
-                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                        !selectedCategory ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
-                      )}
-                    >
-                      Hepsi
-                    </button>
-                    <button 
-                      onClick={() => handleCategoryChange("Sebzeler")}
-                      className={cn(
-                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                        selectedCategory === "Sebzeler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
-                      )}
-                    >
-                      Sebzeler
-                    </button>
-                    <button 
-                      onClick={() => handleCategoryChange("Meyveler")}
-                      className={cn(
-                        "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
-                        selectedCategory === "Meyveler" ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
-                      )}
-                    >
-                      Meyveler
-                    </button>
-                  </>
-                )}
-                {selectedCategory === "Böcekler" && (
-                  <button 
-                    onClick={() => handleCategoryChange(null)}
-                    className="px-6 py-2 rounded-full font-medium bg-brand-cream text-brand-green hover:bg-brand-green/5 transition-all whitespace-nowrap flex items-center gap-2"
-                  >
-                    <ChevronRight className="rotate-180" size={16} />
-                    Geri Dön
-                  </button>
-                )}
+                <button 
+                  onClick={() => handleCategoryChange(null)}
+                  className={cn(
+                    "px-6 py-2 rounded-full font-medium transition-all whitespace-nowrap",
+                    !selectedCategory ? "bg-brand-green text-brand-cream" : "bg-brand-cream text-brand-green hover:bg-brand-green/5"
+                  )}
+                >
+                  Tohumlar
+                </button>
                 <button 
                   onClick={() => handleCategoryChange("Böcekler")}
                   className={cn(
@@ -2383,29 +2358,37 @@ export default function App() {
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex gap-3 overflow-x-auto pb-2 no-scrollbar border-t border-brand-green/5 pt-6"
+                  className="flex flex-col gap-3 border-t border-brand-green/5 pt-6"
                 >
-                  <button 
-                    onClick={() => setSelectedSubCategory(null)}
-                    className={cn(
-                      "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                      !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
-                    )}
-                  >
-                    Tüm Sebzeler
-                  </button>
-                  {vegetableTypes.map((type) => (
+                  <div className="flex items-center justify-between md:hidden px-1">
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest">Alt Kategoriler</span>
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest flex items-center gap-1 animate-pulse">
+                      Yana Kaydır <ChevronRight size={12} />
+                    </span>
+                  </div>
+                  <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
                     <button 
-                      key={type}
-                      onClick={() => setSelectedSubCategory(type)}
+                      onClick={() => setSelectedSubCategory(null)}
                       className={cn(
                         "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                        selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
                       )}
                     >
-                      {type}
+                      Tüm Sebzeler
                     </button>
-                  ))}
+                    {vegetableTypes.map((type) => (
+                      <button 
+                        key={type}
+                        onClick={() => setSelectedSubCategory(type)}
+                        className={cn(
+                          "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
+                          selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        )}
+                      >
+                        {type}
+                      </button>
+                    ))}
+                  </div>
                 </motion.div>
               )}
 
@@ -2413,29 +2396,37 @@ export default function App() {
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex gap-3 overflow-x-auto pb-2 no-scrollbar border-t border-brand-green/5 pt-6"
+                  className="flex flex-col gap-3 border-t border-brand-green/5 pt-6"
                 >
-                  <button 
-                    onClick={() => setSelectedSubCategory(null)}
-                    className={cn(
-                      "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                      !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
-                    )}
-                  >
-                    Tüm Meyveler
-                  </button>
-                  {fruitTypes.map((type) => (
+                  <div className="flex items-center justify-between md:hidden px-1">
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest">Alt Kategoriler</span>
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest flex items-center gap-1 animate-pulse">
+                      Yana Kaydır <ChevronRight size={12} />
+                    </span>
+                  </div>
+                  <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
                     <button 
-                      key={type}
-                      onClick={() => setSelectedSubCategory(type)}
+                      onClick={() => setSelectedSubCategory(null)}
                       className={cn(
                         "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                        selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
                       )}
                     >
-                      {type}
+                      Tüm Meyveler
                     </button>
-                  ))}
+                    {fruitTypes.map((type) => (
+                      <button 
+                        key={type}
+                        onClick={() => setSelectedSubCategory(type)}
+                        className={cn(
+                          "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
+                          selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        )}
+                      >
+                        {type}
+                      </button>
+                    ))}
+                  </div>
                 </motion.div>
               )}
 
@@ -2443,29 +2434,37 @@ export default function App() {
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex gap-3 overflow-x-auto pb-2 no-scrollbar border-t border-brand-green/5 pt-6"
+                  className="flex flex-col gap-3 border-t border-brand-green/5 pt-6"
                 >
-                  <button 
-                    onClick={() => setSelectedSubCategory(null)}
-                    className={cn(
-                      "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                      !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
-                    )}
-                  >
-                    Tüm Böcekler
-                  </button>
-                  {insectTypes.map((type) => (
+                  <div className="flex items-center justify-between md:hidden px-1">
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest">Alt Kategoriler</span>
+                    <span className="text-[10px] font-bold text-brand-leaf/60 uppercase tracking-widest flex items-center gap-1 animate-pulse">
+                      Yana Kaydır <ChevronRight size={12} />
+                    </span>
+                  </div>
+                  <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
                     <button 
-                      key={type}
-                      onClick={() => setSelectedSubCategory(type)}
+                      onClick={() => setSelectedSubCategory(null)}
                       className={cn(
                         "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
-                        selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        !selectedSubCategory ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
                       )}
                     >
-                      {type}
+                      Tüm Böcekler
                     </button>
-                  ))}
+                    {insectTypes.map((type) => (
+                      <button 
+                        key={type}
+                        onClick={() => setSelectedSubCategory(type)}
+                        className={cn(
+                          "px-4 py-1.5 rounded-xl text-sm font-medium transition-all whitespace-nowrap border",
+                          selectedSubCategory === type ? "bg-brand-leaf text-brand-cream border-brand-leaf" : "bg-white text-brand-green border-brand-green/10 hover:border-brand-leaf"
+                        )}
+                      >
+                        {type}
+                      </button>
+                    ))}
+                  </div>
                 </motion.div>
               )}
             </div>
