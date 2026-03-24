@@ -1096,37 +1096,6 @@ const PRODUCTS: Product[] = [
     ]
   },
   {
-    id: "b3_2",
-    name: "Porcellio laevis 'Panda'",
-    category: "Böcekler",
-    subCategory: "Canlı Yemler / Hamam Böcekleri",
-    price: 9,
-    description: "İzopod hobisine yeni başlayanlar için ideal, eğlenceli ve dayanıklı bir türdür. Süt beyazı üzerine siyah lekeleriyle pandayı andırırlar. Mükemmel temizlikçi ekiptirler.",
-    image: "https://lh3.googleusercontent.com/d/1Yov0IikTiHQXzLdXYBjb-FGSG7e6WLFz",
-    scientificName: "Porcellio laevis",
-    family: "Porcellionidae",
-    origin: "Avrupa",
-    plantingSeason: "",
-    harvestTime: "",
-    difficulty: "Kolay",
-    soilType: "Nem tutma kapasitesi yüksek torf ve kuru yaprak karışımı",
-    watering: "Bir tarafı nemli, bir tarafı kuru tutulmalıdır",
-    sunlight: "Karanlık veya loş ortam",
-    tips: "Hızlı ve aktiftirler. Kalsiyum ihtiyaçları için sepia kemiği mutlaka bulunmalıdır. Makine gibi ürerler.",
-    healthBenefits: [],
-    usage: [
-      "İdeal sıcaklık 20-26°C",
-      "Nem oranı %50-70 arası",
-      "Haftada 1-2 kez protein desteği",
-      "Bolca kuru yaprak ve çürümüş odun"
-    ],
-    nutritionalValue: [
-      { label: "Boyut", value: "2 - 2.5 cm" },
-      { label: "Üreme Hızı", value: "Çok Hızlı" },
-      { label: "Karakter", value: "Aktif & Hızlı" }
-    ]
-  },
-  {
     id: "b4",
     name: "Telodeinopus aoutii (Zeytin Yeşili Afrika Çıyanı)",
     category: "Böcekler",
