@@ -72,6 +72,7 @@ interface Product {
   healthBenefits?: string[];
   usage?: string[];
   nutritionalValue?: { label: string; value: string }[];
+  minOrder?: string;
 }
 
 // --- Mock Data ---
@@ -199,7 +200,7 @@ const PRODUCTS: Product[] = [
     name: "Carolina Reaper Biber Tohumu 🌶️🔥",
     category: "Sebzeler",
     subCategory: "Biber",
-    price: 20,
+    price: 25,
     description: "Carolina Reaper, dünyadaki en acı biberlerden biridir. Aşırı acılığı ve karakteristik kuyruklu (stinger) şekli ile tanınan bu efsanevi biberin tohumudur.",
     image: "https://lh3.googleusercontent.com/d/1xJXeowGC8-tIiPsHFgf1iYAM-Z4CeGWt",
     scientificName: "Capsicum chinense",
@@ -1040,6 +1041,7 @@ const PRODUCTS: Product[] = [
     subCategory: "Canlı Yemler / Hamam Böcekleri",
     price: 1.50,
     description: "Dünyanın en popüler yem böceği türüdür. Bakımları kolay, besin değerleri yüksektir. Uçamazlar ve pürüzsüz yüzeylere tırmanamazlar. Koku ve ses yapmazlar.",
+    minOrder: "50 Adet",
     image: "https://lh3.googleusercontent.com/d/11IvU-A6MZ13UnbVl80bsVipK9-MZXDS7",
     scientificName: "Blaptica dubia",
     family: "Blaberidae",
@@ -1128,22 +1130,23 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "b5",
-    name: "Morio Kurdu",
+    name: "Un Kurdu",
     category: "Böcekler",
     subCategory: "Canlı Yemler / Hamam Böcekleri",
-    price: 0.15,
-    description: "Hobi dünyasında 'Giant Mealworm' (Dev Un Kurdu) olarak da bilinen, besin değeri yüksek ve hareketli bir yem böceğidir. Un kurtlarından daha büyük ve agresiftirler.",
+    price: 1,
+    description: "Hobi dünyasında en yaygın kullanılan, besin değeri yüksek ve bakımı kolay bir yem böceğidir.",
+    minOrder: "100 Adet",
     image: "https://lh3.googleusercontent.com/d/18MjGtsHJwO6uA60AvVyQFjfgQE1SFeyk",
-    scientificName: "Zophobas morio",
+    scientificName: "Tenebrio molitor",
     family: "Tenebrionidae",
-    origin: "Orta ve Güney Amerika",
+    origin: "Kozmopolit (Dünya Geneli)",
     plantingSeason: "",
     harvestTime: "",
     difficulty: "Kolay",
     soilType: "Yulaf ezmesi, buğday kepeği veya mısır unu yataklığı",
     watering: "Nem ihtiyacı taze patates, havuç veya elma dilimlerinden sağlanır",
     sunlight: "Oda sıcaklığında, doğrudan güneşten uzak",
-    tips: "Buzdolabına konulmamalıdırlar, soğuğa hassastırlar. Güçlü çeneleri vardır, besleme sırasında dikkat edilmelidir.",
+    tips: "Buzdolabında saklanabilirler, soğuğa dayanıklıdırlar. Bakımı en kolay yem böceği türüdür.",
     healthBenefits: [],
     usage: [
       "İdeal sıcaklık 22-27°C",
@@ -1152,9 +1155,9 @@ const PRODUCTS: Product[] = [
       "Pupa için tek başına ayırma gerekir"
     ],
     nutritionalValue: [
-      { label: "Boyut", value: "5 - 6 cm" },
-      { label: "Besin Değeri", value: "Yüksek Yağ & Protein" },
-      { label: "Karakter", value: "Agresif & Hareketli" }
+      { label: "Boyut", value: "2 - 3 cm" },
+      { label: "Besin Değeri", value: "Yüksek Protein" },
+      { label: "Karakter", value: "Uysal & Yavaş" }
     ]
   }
 ];
@@ -1557,7 +1560,7 @@ const ProductCard = ({ product, onInfoClick, onAddToCart }: { product: Product; 
           referrerPolicy="no-referrer"
           loading="lazy"
         />
-        <div className="absolute top-4 left-4 flex flex-col gap-2">
+        <div className="absolute top-4 left-4 flex flex-col gap-2 items-start">
           <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-brand-green text-[9px] font-bold rounded-lg uppercase tracking-widest shadow-sm border border-brand-green/5">
             {product.category}
           </span>
@@ -1670,6 +1673,18 @@ const ProductModal = ({ product, onClose, onAddToCart }: { product: Product; onC
                 <p className="text-lg text-brand-green/90 leading-relaxed font-serif italic">
                   "{product.description}"
                 </p>
+
+                {product.minOrder && (
+                  <div className="mt-6 p-4 bg-red-50 border border-red-100 rounded-2xl flex items-center gap-4 animate-pulse">
+                    <div className="w-10 h-10 rounded-xl bg-red-100 flex items-center justify-center text-red-600 shrink-0">
+                      <ShoppingBag size={20} />
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-red-600 mb-1">Önemli Bilgilendirme</p>
+                      <p className="text-sm font-bold text-red-700">Bu ürün için minimum gönderim miktarı: {product.minOrder}</p>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Quick Stats Grid */}
