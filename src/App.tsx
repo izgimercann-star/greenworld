@@ -1035,38 +1035,6 @@ const PRODUCTS: Product[] = [
     ]
   },
   {
-    id: "b2",
-    name: "Dubia Hamamböceği",
-    category: "Böcekler",
-    subCategory: "Canlı Yemler / Hamam Böcekleri",
-    price: 1.50,
-    description: "Dünyanın en popüler yem böceği türüdür. Bakımları kolay, besin değerleri yüksektir. Uçamazlar ve pürüzsüz yüzeylere tırmanamazlar. Koku ve ses yapmazlar.",
-    minOrder: "50 Adet",
-    image: "https://lh3.googleusercontent.com/d/11IvU-A6MZ13UnbVl80bsVipK9-MZXDS7",
-    scientificName: "Blaptica dubia",
-    family: "Blaberidae",
-    origin: "Orta ve Güney Amerika",
-    plantingSeason: "",
-    harvestTime: "",
-    difficulty: "Kolay",
-    soilType: "Havalandırması iyi plastik kutu ve yumurta viyolleri",
-    watering: "Su ihtiyacı taze meyve/sebze veya su jelinden sağlanmalıdır",
-    sunlight: "Karanlık ortamları tercih ederler",
-    tips: "İstila riski düşüktür. Yetişkinler 1.5-2 yıl yaşayabilir. Protein oranı çok yüksektir ve sindirimi kolaydır.",
-    healthBenefits: [],
-    usage: [
-      "İdeal sıcaklık 25°C - 30°C",
-      "Nem oranı %40-60 arası",
-      "Taze havuç, elma, kabak ile besleme",
-      "Alerji riskine karşı eldiven kullanımı"
-    ],
-    nutritionalValue: [
-      { label: "Protein", value: "Çok Yüksek" },
-      { label: "Kitin Oranı", value: "Düşük (Kolay Sindirim)" },
-      { label: "Ömür", value: "1.5 - 2 Yıl" }
-    ]
-  },
-  {
     id: "b3",
     name: "Porcellio laevis 'Panda'",
     category: "Böcekler",
@@ -1095,69 +1063,6 @@ const PRODUCTS: Product[] = [
       { label: "Boyut", value: "2 - 2.5 cm" },
       { label: "Üreme Hızı", value: "Çok Hızlı" },
       { label: "Karakter", value: "Aktif & Hızlı" }
-    ]
-  },
-  {
-    id: "b4",
-    name: "Telodeinopus aoutii (Zeytin Yeşili Afrika Çıyanı)",
-    category: "Böcekler",
-    subCategory: "Isopod / Çok Bacaklılar",
-    price: 200,
-    description: "Hobi dünyasındaki en zarif ve barışçıl dev çıyan türlerinden biridir. Zeytin yeşili gövdesi ve tırmanma yeteneğiyle bilinir. Isırma huyu yoktur.",
-    image: "https://lh3.googleusercontent.com/d/19mzuWL5TWItGFcGaHWyPns_dIQryLuUc",
-    scientificName: "Telodeinopus aoutii",
-    family: "Spirostreptidae",
-    origin: "Batı Afrika (Gana, Togo)",
-    plantingSeason: "",
-    harvestTime: "",
-    difficulty: "Kolay",
-    soilType: "10-15 cm derinliğinde steril toprak ve yaprak çürüntüsü",
-    watering: "Günde bir kez hafif fısfıs, toprak nemli kalmalı",
-    sunlight: "Gececil, doğrudan güneşten uzak",
-    tips: "Tırmanmayı çok severler. Panda isopodlar ile aynı teraryumda beslenebilirler. 5-7 yıl yaşayabilirler.",
-    healthBenefits: [],
-    usage: [
-      "İdeal sıcaklık 22-26°C",
-      "Nem oranı %70-80 arası",
-      "Bolca kalsiyum (sepia kemiği)",
-      "Taze salatalık, kabak ve mantar"
-    ],
-    nutritionalValue: [
-      { label: "Boyut", value: "15 - 20 cm" },
-      { label: "Ömür", value: "5 - 7 Yıl" },
-      { label: "Karakter", value: "Barışçıl & Uysal" }
-    ]
-  },
-  {
-    id: "b5",
-    name: "Un Kurdu",
-    category: "Böcekler",
-    subCategory: "Canlı Yemler / Hamam Böcekleri",
-    price: 1,
-    description: "Hobi dünyasında en yaygın kullanılan, besin değeri yüksek ve bakımı kolay bir yem böceğidir.",
-    minOrder: "100 Adet",
-    image: "https://lh3.googleusercontent.com/d/18MjGtsHJwO6uA60AvVyQFjfgQE1SFeyk",
-    scientificName: "Tenebrio molitor",
-    family: "Tenebrionidae",
-    origin: "Kozmopolit (Dünya Geneli)",
-    plantingSeason: "",
-    harvestTime: "",
-    difficulty: "Kolay",
-    soilType: "Yulaf ezmesi, buğday kepeği veya mısır unu yataklığı",
-    watering: "Nem ihtiyacı taze patates, havuç veya elma dilimlerinden sağlanır",
-    sunlight: "Oda sıcaklığında, doğrudan güneşten uzak",
-    tips: "Buzdolabında saklanabilirler, soğuğa dayanıklıdırlar. Bakımı en kolay yem böceği türüdür.",
-    healthBenefits: [],
-    usage: [
-      "İdeal sıcaklık 22-27°C",
-      "Yataklık aynı zamanda besindir",
-      "Taze sebze ile su ihtiyacı karşılama",
-      "Pupa için tek başına ayırma gerekir"
-    ],
-    nutritionalValue: [
-      { label: "Boyut", value: "2 - 3 cm" },
-      { label: "Besin Değeri", value: "Yüksek Protein" },
-      { label: "Karakter", value: "Uysal & Yavaş" }
     ]
   }
 ];
@@ -1240,7 +1145,7 @@ const InsectSpotlight = ({ onCategorySelect, onDiscoverClick }: { onCategorySele
             <button 
               onClick={() => {
                 onCategorySelect("Böcekler");
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                onDiscoverClick();
               }}
               className="w-full sm:w-auto px-10 py-4 bg-brand-sun text-brand-green rounded-full font-bold hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
             >
@@ -2154,7 +2059,6 @@ export default function App() {
   ];
 
   const insectTypes: SubCategoryType[] = [
-    "Canlı Yemler / Hamam Böcekleri",
     "Isopod / Çok Bacaklılar",
     "Tiaratum / Yaprak Böceği"
   ];
@@ -2220,10 +2124,26 @@ export default function App() {
     setSelectedCategory(cat);
     setSelectedSubCategory(null);
     setSearchQuery("");
+    
+    if (cat) {
+      setTimeout(() => {
+        const yOffset = -100; // Account for fixed header
+        const element = productsSectionRef.current;
+        if (element) {
+          const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100);
+    }
   };
 
   const handleDiscoverClick = () => {
-    productsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    const yOffset = -100;
+    const element = productsSectionRef.current;
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   const addToCart = (product: Product) => {
