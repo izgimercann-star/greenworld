@@ -1219,7 +1219,6 @@ const Navbar = ({
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-serif font-bold tracking-tight text-brand-green leading-none">Green World</span>
-              <span className="text-[8px] text-brand-leaf font-bold tracking-[0.2em] uppercase mt-1">by MERCAN İZGİ</span>
             </div>
           </div>
 
@@ -1271,7 +1270,7 @@ const Navbar = ({
               </div>
 
               <a 
-                href="https://wa.me/905347636010" 
+                href="https://wa.me/905446419723" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-brand-green text-brand-cream px-5 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-wider hover:bg-brand-leaf transition-all shadow-md hover:shadow-lg"
@@ -1317,10 +1316,10 @@ const Navbar = ({
             <button onClick={() => { onAboutOpen(); setIsOpen(false); }} className="block w-full text-left p-2 hover:bg-brand-green/5 rounded-lg">Hakkımızda</button>
             <div className="flex items-center gap-2 bg-brand-green text-brand-cream px-4 py-3 rounded-xl text-sm font-medium">
               <Phone size={16} />
-              <a href="tel:05347636010">0534 763 60 10</a>
+              <a href="tel:05446419723">0544 641 97 23</a>
               <div className="w-px h-4 bg-brand-cream/20 mx-1"></div>
               <a 
-                href="https://wa.me/905347636010" 
+                href="https://wa.me/905446419723" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-1"
@@ -1373,10 +1372,6 @@ const Hero = ({ onAboutOpen, onDiscoverClick }: { onAboutOpen: () => void; onDis
                   Tohumlar & Böcekler
                 </span>
               </div>
-              <div className="w-1 h-1 rounded-full bg-brand-green/20" />
-              <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-brand-green/60">
-                Kurucu: MERCAN İZGİ
-              </span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif font-bold leading-[1.1] md:leading-[0.95] mb-6 md:mb-8 text-black tracking-tighter drop-shadow-sm">
@@ -1844,7 +1839,7 @@ const CartModal = ({
               <p className="text-brand-green font-bold text-sm uppercase tracking-widest mb-4 opacity-60">Sipariş Onayı</p>
               <div className="flex flex-col gap-3">
                 <a 
-                  href="https://wa.me/905347636010" 
+                  href="https://wa.me/905446419723" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all"
@@ -1853,7 +1848,7 @@ const CartModal = ({
                   WhatsApp ile Sipariş Ver
                 </a>
                 <a 
-                  href="tel:05347636010"
+                  href="tel:05446419723"
                   className="flex items-center justify-center gap-2 text-brand-earth/60 text-xs mt-2 hover:text-brand-green transition-colors"
                 >
                   <Phone size={12} />
@@ -1917,7 +1912,7 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
 
         <div className="space-y-8 text-brand-green/80 leading-relaxed text-lg font-serif">
           <p>
-            <span className="font-bold text-brand-green">Green World</span>, kurucumuz <span className="font-bold text-brand-leaf uppercase">MERCAN İZGİ</span>'nin toprağa olan tutkusu ve doğanın her formuna duyduğu derin saygının bir meyvesi olarak doğdu. Bizim için bir tohum yaşamın başlangıcı, bir canlı ise doğanın eşsiz bir parçasıdır.
+            <span className="font-bold text-brand-green">Green World</span>, toprağa olan tutkumuz ve doğanın her formuna duyduğumuz derin saygının bir meyvesi olarak doğdu. Bizim için bir tohum yaşamın başlangıcı, bir canlı ise doğanın eşsiz bir parçasıdır.
           </p>
           <p>
             Geleneksel tarımı desteklemek için <span className="italic text-brand-leaf font-medium">atalık tohumları</span> korurken, aynı zamanda egzotik canlıların büyüleyici dünyasını sizlerle paylaşıyoruz. Sunduğumuz her tohum bir miras, her canlı ise doğanın bize sunduğu bir dosttur.
@@ -1928,13 +1923,13 @@ const AboutModal = ({ onClose }: { onClose: () => void }) => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-brand-green/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="tel:05347636010" className="flex items-center gap-4 group">
+          <a href="tel:05446419723" className="flex items-center gap-4 group">
             <div className="w-10 h-10 rounded-full bg-brand-green/5 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-brand-cream transition-all">
               <Phone size={18} />
             </div>
             <div>
               <p className="text-[10px] font-bold uppercase tracking-widest text-brand-earth/60 group-hover:text-brand-leaf transition-colors">Bize Ulaşın</p>
-              <p className="font-bold text-brand-green group-hover:text-brand-leaf transition-colors">0534 763 60 10</p>
+              <p className="font-bold text-brand-green group-hover:text-brand-leaf transition-colors">0544 641 97 23</p>
             </div>
           </a>
           <button 
@@ -2008,11 +2003,11 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
             <ul className="space-y-4 text-brand-cream/60 text-sm">
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-brand-sun" />
-                <a href="tel:05347636010" className="hover:text-brand-sun transition-colors">0534 763 60 10</a>
+                <a href="tel:05446419723" className="hover:text-brand-sun transition-colors">0544 641 97 23</a>
               </li>
               <li className="flex items-center gap-3">
                 <MessageCircle size={16} className="text-brand-sun" />
-                <a href="https://wa.me/905347636010" target="_blank" rel="noopener noreferrer" className="hover:text-brand-sun transition-colors">WhatsApp Hattı</a>
+                <a href="https://wa.me/905446419723" target="_blank" rel="noopener noreferrer" className="hover:text-brand-sun transition-colors">WhatsApp Hattı</a>
               </li>
               <li className="flex items-start gap-3">
                 <Info size={16} className="text-brand-sun shrink-0 mt-1" />
@@ -2025,8 +2020,6 @@ const Footer = ({ onAboutOpen, onCategorySelect }: { onAboutOpen: () => void; on
         <div className="pt-10 border-t border-brand-cream/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-medium uppercase tracking-widest text-brand-cream/30">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p>© 2026 Green World.</p>
-            <div className="hidden md:block w-1 h-1 rounded-full bg-brand-cream/20" />
-            <p className="text-brand-sun font-bold">MERCAN İZGİ</p>
           </div>
           <div className="flex gap-8">
             <a href="#" className="hover:text-brand-sun transition-colors">Gizlilik Politikası</a>
